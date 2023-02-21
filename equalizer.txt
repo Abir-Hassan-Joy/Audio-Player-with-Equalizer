@@ -1,0 +1,29 @@
+Finite impulse response --> 0 to finite ammount of time
+Nyquist frequenbcy --> minimum rate at whitch signal can be sampled without introducing error
+
+1. firls Linear-phase FIR filter design using least-squares error minimization
+2.a length N+1 linear phase
+3.FIR filter which has the best approximation to the
+    desired frequency response described by F and A in the least squares
+    sense
+4. F is a vector of frequency band edges in pairs, in ascending
+    order between 0 and 1.
+5. 1 corresponds to the Nyquist frequency or half
+    the sampling frequency
+6. A is a real vector the same size as F
+    which specifies the desired amplitude of the frequency response of the
+    resultant filter B
+
+ fir1   FIR filter design using the window method.
+    B = fir1(N,Wn) designs an N'th order lowpass FIR digital filter
+    and returns the filter coefficients in length N+1 vector B.
+    The cut-off frequency Wn must be between 0 < Wn < 1.0, with 1.0
+    corresponding to half the sample rate.  The filter B is real and
+    has linear phase.  The normalized gain of the filter at Wn is
+    -6 dB.
+ 
+    B = fir1(N,Wn,'high') designs an N'th order highpass filter.
+    You can also use B = fir1(N,Wn,'low') to design a lowpass filter.
+
+order means maximum delay in samples
+delay elements used in filter circuit
